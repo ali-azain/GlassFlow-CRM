@@ -1,7 +1,8 @@
 {
-  "name": "copy-of-glassflow-crm",
+  "name": "glassflow-crm",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://ali-azain.github.io/GlassFlow-CRM",
   "type": "module",
   "scripts": {
     "dev": "vite",
