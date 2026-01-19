@@ -1,20 +1,43 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+## GlassFlow CRM (Vite + React) — Supabase-enabled
 
-# Run and deploy your AI Studio app
+This project is a minimalist, glassy CRM with:
+- **Supabase Auth** (email/password)
+- **Postgres** storage for leads
+- **Row Level Security (RLS)** so each user can only access their own data
 
-This contains everything you need to run your app locally.
+### Run locally
 
-View your app in AI Studio: https://ai.studio/apps/drive/1UzbnaLeXdDwzX60lo7zVb_dEmSdHUeUJ
-
-## Run Locally
-
-**Prerequisites:**  Node.js
-
+**Prerequisites**: Node.js
 
 1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+
+```bash
+npm install
+```
+
+2. Create your Supabase schema:
+- Open Supabase → **SQL Editor**
+- Run `supabase/schema.sql`
+
+3. Enable auth:
+- Supabase → **Authentication** → **Providers**
+- Enable **Email** provider (email/password)
+
+4. Create `.env.local` (do not commit) in the project root:
+
+```bash
+VITE_SUPABASE_URL=YOUR_SUPABASE_PROJECT_URL
+VITE_SUPABASE_ANON_KEY=YOUR_SUPABASE_ANON_OR_PUBLISHABLE_KEY
+```
+
+Tip: `env.example` is included as a template.
+
+5. Start the dev server:
+
+```bash
+npm run dev
+```
+
+### Notes
+- **Privacy**: The `leads` table has RLS policies so only `auth.uid()` can read/write their own rows.
+- If you see “Supabase is not configured”, verify your `.env.local` values and restart the dev server.

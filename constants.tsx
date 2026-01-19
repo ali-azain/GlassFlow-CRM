@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { LayoutDashboard, Kanban, Users, Settings, CreditCard } from 'lucide-react';
+import { LayoutDashboard, Kanban, Users, Settings, CreditCard, CheckSquare } from 'lucide-react';
 import { ViewType, LeadStage, Column } from './types';
 
 export const COLORS = {
@@ -17,6 +17,7 @@ export const NAV_ITEMS = [
   { id: 'dashboard' as ViewType, label: 'Dashboard', icon: LayoutDashboard },
   { id: 'pipeline' as ViewType, label: 'Pipeline', icon: Kanban },
   { id: 'leads' as ViewType, label: 'Leads', icon: Users },
+  { id: 'tasks' as ViewType, label: 'Tasks', icon: CheckSquare },
   { id: 'settings' as ViewType, label: 'Settings', icon: Settings },
   { id: 'billing' as ViewType, label: 'Billing', icon: CreditCard },
 ];

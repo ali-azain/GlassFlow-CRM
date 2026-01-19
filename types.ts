@@ -26,4 +26,28 @@ export interface Column {
   title: string;
 }
 
-export type ViewType = 'dashboard' | 'pipeline' | 'leads' | 'settings' | 'billing';
+export type ViewType = 'dashboard' | 'pipeline' | 'leads' | 'settings' | 'billing' | 'tasks';
+
+export enum TaskPriority {
+  LOW = 'Low',
+  MEDIUM = 'Medium',
+  HIGH = 'High'
+}
+
+export enum TaskStatus {
+  TODO = 'Todo',
+  IN_PROGRESS = 'In Progress',
+  DONE = 'Done'
+}
+
+export interface Task {
+  id: string;
+  lead_id?: string;
+  title: string;
+  description?: string;
+  priority: TaskPriority;
+  status: TaskStatus;
+  due_date?: string;
+  created_at: string;
+}
+
