@@ -183,7 +183,7 @@ const CrmApp: React.FC<CrmAppProps> = ({ onSignOut }) => {
             <div className="w-6 h-6 rounded bg-[#1A1A1A] flex items-center justify-center">
               <span className="text-white text-[10px] font-bold">G</span>
             </div>
-            <span className="text-sm font-semibold tracking-tight">GlassFlow</span>
+            <span className="text-sm font-semibold tracking-tight">GlassFlow CRM</span>
           </div>
           <button className="p-1 text-slate-400 hover:text-slate-600 transition-colors">
             <ChevronDown size={14} />

@@ -45,7 +45,7 @@ const CSVHeaderMapper: React.FC<HeaderMapperProps> = ({ csvHeaders, onMappingCom
     return (
         <div className="bg-[#0A0A0A] border border-white/10 rounded-xl p-6 shadow-xl max-w-2xl mx-auto">
             <h3 className="text-lg font-semibold text-white mb-4">Map Fields</h3>
-            <p className="text-white/50 text-sm mb-6">Match your CSV columns to the corresponding fields in GlassFlow.</p>
+            <p className="text-white/50 text-sm mb-6">Match your CSV columns to the corresponding fields in GlassFlow CRM.</p>
 
             <div className="space-y-3">
                 {CRM_FIELDS.map((field) => (
@@ -80,8 +80,8 @@ const CSVHeaderMapper: React.FC<HeaderMapperProps> = ({ csvHeaders, onMappingCom
                     onClick={() => onMappingComplete(mapping)}
                     disabled={!isMappingValid()}
                     className={`px-6 py-2 rounded-lg text-sm font-medium flex items-center space-x-2 transition-all ${isMappingValid()
-                            ? 'bg-blue-500 hover:bg-blue-600 text-white shadow-lg shadow-blue-500/20'
-                            : 'bg-white/5 text-white/20 cursor-not-allowed'
+                        ? 'bg-blue-500 hover:bg-blue-600 text-white shadow-lg shadow-blue-500/20'
+                        : 'bg-white/5 text-white/20 cursor-not-allowed'
                         }`}
                 >
                     <span>Continue Import</span>

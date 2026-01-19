@@ -152,7 +152,7 @@ const Navbar: React.FC<{ onGetStarted: () => void; onSignIn: () => void }> = ({ 
         <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-400 to-violet-500 flex items-center justify-center shadow-lg shadow-cyan-500/20">
           <span className="text-white text-xs font-bold">G</span>
         </div>
-        <span className="text-white text-sm font-semibold tracking-tight">GlassFlow</span>
+        <span className="text-white text-sm font-semibold tracking-tight">GlassFlow CRM</span>
       </div>
       <nav className="hidden md:flex items-center space-x-8 text-sm text-white/60">
         <a href="#features" className="hover:text-white transition-colors">Features</a>
@@ -623,7 +623,7 @@ const Footer: React.FC = () => (
         <div className="w-6 h-6 rounded-md bg-gradient-to-br from-cyan-400 to-violet-500 flex items-center justify-center">
           <span className="text-white text-[10px] font-bold">G</span>
         </div>
-        <span className="text-white/60 text-sm">GlassFlow © 2025</span>
+        <span className="text-white/60 text-sm">GlassFlow CRM © 2025</span>
       </div>
       <div className="flex items-center space-x-6 text-sm text-white/40">
         <a href="#" className="hover:text-white transition-colors">Privacy</a>
